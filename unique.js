@@ -1,11 +1,17 @@
-const addToZero = (arr) => {
-    for(let i=0; i<arr.length; i++){
-        for(let j=0; j<arr.length; j++)
-        
-        if(arr[i] + arr[j] === 0)
-        return true
+function unique(word) {
+    for (let i = 0; i < word.length; i++) {
+      for( let j = i + 1; j < word.length; j++){
+        if(word[j] == word[i]){
+            return false
+            }
+        }
     }
-    return false
+  return true
 }
 
-console.log(addToZero([1,1,2,2,3,3,4,4,5,5,6]))
+
+  console.log(unique('stove'))
+
+//Time Complexity = O(n^2)
+
+//Space Complexity = O(n)
